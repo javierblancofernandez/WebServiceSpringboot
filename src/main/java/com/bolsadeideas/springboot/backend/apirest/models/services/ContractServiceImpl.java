@@ -23,4 +23,21 @@ public class ContractServiceImpl implements IContractServices {
 		return (List<Contract>) contratoDao.findAll();
 	}
 
+	@Override
+	@Transactional
+	public void saveAll(List<Contract> contracts) {
+		// TODO Auto-generated method stub
+		System.out.println("*** esto es lo que hay en contracts"+contracts);
+		contratoDao.saveAll(contracts);
+	}
+	
+	@Override
+	@Transactional
+	public Contract save(Contract contract) {
+		// TODO Auto-generated method stub
+		System.out.println("*** esto es lo que hay en contracts"+contract);
+		return contratoDao.save(contract);
+	}
+
+
 }

@@ -9,5 +9,8 @@ public interface IContractServices {
 	
 	public List<Contract> findAll();
 
+	public void saveAll(List<Contract> contracts);
+	
+	public Contract save(Contract contract);
 
 }
