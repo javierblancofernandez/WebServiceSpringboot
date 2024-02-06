@@ -35,9 +35,9 @@ public class ClienteRestController {
 	@Autowired
 	private IContractServices contractService;
 	@GetMapping("/contrato")
-	public Contract indexContract(){
+	public List<Contract> indexContract(){
 		System.out.println("*** esto es lo que hay en contracts rest controller");
-		return (contractService.findAll()).get(0);
+		return contractService.findAll();
 	}
 	
 	@PostMapping("/clientes")
